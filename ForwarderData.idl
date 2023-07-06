@@ -1,0 +1,17 @@
+module ForwarderData
+{
+  @final
+  struct Msg_Base
+  {
+    unsigned long long count;
+    unsigned long payloadsize;
+  };
+
+  @final
+  struct Msg_8192
+  {
+    unsigned long long count;
+    unsigned long payloadsize;
+    octet payload[8192 - 12];
+  };
+};
